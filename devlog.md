@@ -7,7 +7,7 @@
 - Logo source - https://icon-icons.com/icon/among-us-instagram/156925
 
 ### Pictures!
-<img src="assets/wip-1.17.21-1.png" height="300">
-<img src="assets/wip-1.17.21-2.png" height="300">
-<img src="assets/wip-1.17.21-3.png" height="300">
-<img src="assets/wip-1.17.21-4.png" height="300">
+<img src="assets/wip-1.17.21-1.png" height="500">
+<img src="assets/wip-1.17.21-2.png" height="500">
+<img src="assets/wip-1.17.21-3.png" height="500">
+<img src="assets/wip-1.17.21-4.png" height="500">
