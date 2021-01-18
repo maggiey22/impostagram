@@ -6,7 +6,7 @@ export default function HomePage({ data }) {
     return (
         <div>
             {data.map((p) => (
-                <Post post={p} />
+                <Post post={p} key={p.key} />
             ))}
         </div>
     );

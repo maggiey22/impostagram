@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import CustomNavbar from './components/Navbar';
+import CustomNavbar from './components/CustomNavbar';
 import HomePage from './components/pages/HomePage';
 import AddPostPage from './components/pages/AddPostPage';
 import RandomPage from './components/pages/RandomPage';
@@ -9,7 +9,11 @@ import Error404Page from './components/pages/404Page.js';
 
 import './App.css';
 
-const DUMMY_DATA = [{ desc: 'data 1' }, { desc: 'data 2' }, { desc: 'data 3' }];
+const DUMMY_DATA = [
+    { key: 0, desc: 'data 0' },
+    { key: 1, desc: 'data 1' },
+    { key: 2, desc: 'data 2' },
+];
 
 export default function App() {
     const [data, setData] = useState(DUMMY_DATA);
