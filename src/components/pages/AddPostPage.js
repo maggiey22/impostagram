@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useToasts } from 'react-toast-notifications';
+import axios from 'axios';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 
 import './AddPostPage.css';
 
+const SERVER_URL = 'http://localhost:5000';
 const DEFAULT_IMG_SRC =
     'http://via.placeholder.com/640x360?text=No+image+uploaded+yet';
 
@@ -50,6 +52,28 @@ export default function AddPostPage() {
         } else {
             console.log(`You submitted! ${caption}`);
             console.log(`You submitted! ${img}`);
+
+            const newPost = {
+                img,
+                desc: caption,
+            };
+
+            axios
+                .post(`${SERVER_URL}/posts/add`, newPost)
+                .then(() => {
+                    clear();
+                    window.location = '/';
+                })
+                .catch((err) => console.log(err));
+
+            // debugging
+            /*const newPost = {
+                desc: caption,
+            };
+            axios.post(`${SERVER_URL}/dummy/add`, newPost).then(() => {
+                clear();
+                window.location = '/';
+            });*/
         }
     };
 
@@ -113,6 +137,7 @@ export default function AddPostPage() {
                         alt="user upload"
                         id="uploaded-img"
                         fluid
+                        rounded
                     />
                 </Col>
                 {/* <img
