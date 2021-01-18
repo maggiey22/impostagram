@@ -58,13 +58,13 @@ export default function AddPostPage() {
                 desc: caption,
             };
 
-            axios
-                .post(`${SERVER_URL}/posts/add`, newPost)
-                .then(() => {
-                    clear();
-                    window.location = '/';
-                })
-                .catch((err) => console.log(err));
+            // axios
+            //     .post(`${SERVER_URL}/posts/add`, newPost)
+            //     .then(() => {
+            //         clear();
+            //         window.location = '/';
+            //     })
+            //     .catch((err) => console.log(err));
 
             // debugging
             /*const newPost = {
