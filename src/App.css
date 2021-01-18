@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
+.title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .common {
     font-family: 'Red Hat Text', sans-serif;
+    font-size: 18px;
 }
 
 .logo {
@@ -10,7 +16,7 @@
     color: rgb(43, 43, 43) !important;
 }
 
-.container {
+/* .container { */
     /* background-color: red;
     color: red; */
-}
+/* } */
