@@ -6,6 +6,10 @@ export default function RandomPage() {
     const DUMMY_POST = {
         key: 1234,
         desc: 'random post',
+        user: {
+            pfp: 'https://randomuser.me/api/portraits/women/90.jpg',
+            username: 'lalala',
+        },
     };
     return (
         <div>

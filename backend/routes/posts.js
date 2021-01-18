@@ -14,7 +14,7 @@ router.route('/add').post((req, res) => {
 
     const newPost = new Post({
         img,
-        desc: desc && desc !== '' ? desc : null,
+        desc: desc !== '' ? desc : null,
     });
 
     newPost

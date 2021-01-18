@@ -11,9 +11,38 @@ import Error404Page from './components/pages/404Page.js';
 import './App.css';
 
 const DUMMY_DATA = [
-    { key: 0, desc: 'data 0' },
-    { key: 1, desc: 'data 1' },
-    { key: 2, desc: 'data 2' },
+    {
+        key: 0,
+        desc: 'data 0',
+        user: {
+            pfp: 'https://randomuser.me/api/portraits/men/75.jpg',
+            username: 'joeman',
+        },
+    },
+    {
+        key: 1,
+        desc: 'data 1',
+        user: {
+            pfp: 'https://randomuser.me/api/portraits/women/90.jpg',
+            username: 'lalala',
+        },
+    },
+    {
+        key: 2,
+        desc: 'data 2',
+        user: {
+            pfp: 'https://randomuser.me/api/portraits/women/90.jpg',
+            username: 'lalala',
+        },
+    },
+    {
+        key: 3,
+        desc: null,
+        user: {
+            pfp: 'https://randomuser.me/api/portraits/women/90.jpg',
+            username: 'lalala',
+        },
+    },
 ];
 
 export default function App() {
