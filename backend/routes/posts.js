@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const axios = require('axios');
+const fs = require('fs');
 
 let Post = require('../models/post.model');
 
@@ -44,14 +45,19 @@ router.route('/add').post((req, res) => {
     const { img, desc } = req.body;
 
     // const randomUser =
-    const newPost = new Post({
-        img,
-        desc: desc !== '' ? desc : null,
-    });
+    // const newPost = new Post({
+    //     img,
+    //     desc: desc !== '' ? desc : null,
+    // });
+
+    // console.log(`hello from backend: ${desc}`);
+    let newPost = new Post();
+    newPost.img.data = fs.readFileSync(img);
+    newPost.img.contentType = 'image/png';
 
     newPost
         .save()
-        .then(() => res.json('Added a dummy item!'))
+        .then(() => res.json('Added a picture!'))
         .catch((err) => console.log(err));
 });
 

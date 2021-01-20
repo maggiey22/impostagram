@@ -58,6 +58,9 @@ export default function AddPostPage() {
                 desc: caption,
             };
 
+            axios.post(`${SERVER_URL}/posts/add`, newPost).then(() => {
+                console.log('image uploaded!');
+            });
             // axios
             //     .post(`${SERVER_URL}/posts/add`, newPost)
             //     .then(() => {
